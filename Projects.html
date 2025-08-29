@@ -1,0 +1,782 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Saim Portfolio</title>
+  <style>
+    body{
+      background-color: rgb(0, 0, 33);
+    }
+  ul a:hover {
+    color: rgb(0, 0, 400 );
+    font-size: 1.5rem;
+  }
+
+  header {
+    background-color: rgb(18, 18, 62);
+    font-family: Segoe UI, sans-serif;
+    font-size: 18px;
+
+  }
+
+  header a {
+    text-decoration: none;
+    color: whitesmoke;
+  }
+
+  h3:hover {
+    color:yellow ;
+  }
+
+  li {
+    list-style: none;
+    margin: 20px;
+  }
+
+  .logo {
+    color: whitesmoke;
+    font-size: 40px;
+    animation: fadeIn 1s ease-in 2s;
+    font-family: Segoe UI, sans-serif;
+  }
+  .logo:hover {
+    color: rgb(0, 0, 500);
+    font-size: 3rem;
+  }
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: space-between;
+    animation: slideintop 3s ease;
+   }
+  @keyframes slideintop {
+    from {
+      opacity: 1;
+      transform: translateY(-50px);
+    }
+
+    to {
+      opacity: 1;
+      transform: translateY(0px);
+    }
+  }
+
+  @keyframes slideindown {
+    from {
+      opacity: 1;
+      transform: translateX(50px);
+    }
+
+    to {
+      opacity: 1;
+      transform: translateY(10px);
+    }
+  }
+    .right ul{
+    display: flex;
+    justify-content: space-between;
+    color: whitesmokes;
+  }
+  #element{
+    color: whitesmoke;
+    margin: 400px;
+    width: 10%;
+    font-size: 40px;
+  }
+  /* ==== Documents (scoped) ==== */
+.docs-section{--docs-b:#e6e6e6;--docs-t:#111827;--docs-m:#6b7280;--docs-ac:#2563eb;--docs-bg:#ffffff;
+  background:var(--docs-bg); color:var(--docs-t); border:1px solid rgba(0,0,0,.06);
+  border-radius:16px; padding:20px; }
+.docs-head{display:flex;align-items:baseline;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-bottom:12px}
+.docs-head h2{margin:0;font-size:1.25rem}
+.docs-sub{margin:0;color:var(--docs-m);font-size:.9rem}
+.docs-controls{display:flex;gap:10px;flex-wrap:wrap;margin:10px 0 16px}
+.docs-input,.docs-select{padding:10px 12px;border:1px solid rgba(0,0,0,.12);border-radius:10px;min-width:220px}
+.docs-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;list-style:none;margin:0;padding:0}
+.docs-card{display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:12px;padding:12px;border:1px solid rgba(0,0,0,.08);border-radius:12px;background:#f9fafb}
+.docs-icon{font-size:1.5rem}
+.docs-name{margin:0 0 4px;font-size:1rem}
+.docs-name a{color:inherit;text-decoration:none}
+.docs-name a:hover{color:var(--docs-ac);text-decoration:underline}
+.docs-meta{margin:0;color:#6b7280;font-size:.85rem}
+.docs-actions{display:flex;gap:8px}
+.docs-btn{appearance:none;border:0;border-radius:10px;padding:8px 12px;background:var(--docs-ac);color:#fff;text-decoration:none;font-size:.9rem}
+.docs-secondary{background:#1118270f;color:#111827;border:1px solid rgba(0,0,0,.12)}
+.docs-empty{margin:8px 0 0;color:#ef4444}
+
+@media (max-width: 720px){
+  .docs-grid{grid-template-columns:1fr}
+  .docs-card{grid-template-columns:1fr}
+  .docs-actions{justify-content:flex-start}
+}
+  </style>
+</head>
+<body>
+<header>
+    <nav>
+      <div class="logo">Saim's Portfolio</div>
+      <div class="right">
+          <ul>
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="About us.html">ABOUT US</a></li>
+            <li><a href="Projects.html">PROJECTS</a></li>
+            <li><a href="New arrivals.html">NEW ARRIVALS</a></li>
+            <li><a href="contact.html">CONTACT ME</a></li>
+          </ul>
+      </div>
+    </nav>
+  </header>
+  <span id="element"></span>
+  <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+
+  <!-- Setup and start animation! -->
+  <script>
+    var typed = new Typed('#element', {
+      strings: ['<i>Welcome To My Projects</i>'],
+      typeSpeed: 50,
+    });
+  </script>
+
+<section id="documents" class="docs-section" aria-labelledby="docs-title">
+  <div class="docs-head">
+    <h2 id="docs-title">Documents</h2>
+    <p class="docs-sub">Search, filter & download project files</p>
+  </div>
+
+  <div class="docs-controls">
+    <input type="search" id="docsSearch" class="docs-input" placeholder="Search documents..." aria-label="Search documents">
+    <select id="docsFilter" class="docs-select" aria-label="Filter by type">
+      <option value="all">All types</option>
+      <option value="pdf">PDF</option>
+      <option value="docx">DOCX</option>
+      <option value="pptx">PPTX</option>
+      <option value="xlsx">XLSX</option>
+      <option value="zip">ZIP</option>
+    </select>
+  </div>
+
+  <ul class="docs-grid" id="docsList">
+    <!-- Item 1 -->
+    <li class="docs-card" data-type="pdf" data-title="Syllabus 2025">
+      <div class="docs-icon">📄</div>
+      <div class="docs-body">
+        <h3 class="docs-name">
+          <a href="assets/docs/syllabus-2025.pdf" target="_blank" rel="noopener">Syllabus 2025 (PDF)</a>
+        </h3>
+        <p class="docs-meta">Updated: 12 Aug 2025 • Size: 1.2 MB</p>
+      </div>
+      <div class="docs-actions">
+        <a class="docs-btn" href="assets/docs/syllabus-2025.pdf" target="_blank" rel="noopener">View</a>
+        <a class="docs-btn docs-secondary" href="assets/docs/syllabus-2025.pdf" download>Download</a>
+      </div>
+    </li>
+
+    <!-- Item 2 -->
+    <li class="docs-card" data-type="docx" data-title="Admission Form">
+      <div class="docs-icon">📝</div>
+      <div class="docs-body">
+        <h3 class="docs-name">
+          <a href="assets/docs/admission-form.docx">Admission Form (DOCX)</a>
+        </h3>
+        <p class="docs-meta">Updated: 05 Aug 2025 • Size: 210 KB</p>
+      </div>
+      <div class="docs-actions">
+        <a class="docs-btn docs-secondary" href="assets/docs/admission-form.docx" download>Download</a>
+      </div>
+    </li>
+
+    <!-- Item 3 -->
+    <li class="docs-card" data-type="pptx" data-title="Orientation Slides">
+      <div class="docs-icon">📊</div>
+      <div class="docs-body">
+        <h3 class="docs-name">
+          <a href="assets/docs/orientation.pptx">Orientation Slides (PPTX)</a>
+        </h3>
+        <p class="docs-meta">Updated: 01 Aug 2025 • Size: 3.4 MB</p>
+      </div>
+      <div class="docs-actions">
+        <a class="docs-btn docs-secondary" href="assets/docs/orientation.pptx" download>Download</a>
+      </div>
+    </li>
+
+    <!-- Item 4 -->
+    <li class="docs-card" data-type="zip" data-title="Lab Resources Pack">
+      <div class="docs-icon">🗂️</div>
+      <div class="docs-body">
+        <h3 class="docs-name">
+          <a href="assets/docs/lab-resources.zip">Lab Resources Pack (ZIP)</a>
+        </h3>
+        <p class="docs-meta">Updated: 28 Jul 2025 • Size: 18.7 MB</p>
+      </div>
+      <div class="docs-actions">
+        <a class="docs-btn docs-secondary" href="assets/docs/lab-resources.zip" download>Download</a>
+      </div>
+    </li>
+  </ul>
+
+  <p id="docsEmpty" class="docs-empty" hidden>No documents match your search.</p>
+</section>
+<script>
+(function(){
+  const q = document.getElementById('docsSearch');
+  const f = document.getElementById('docsFilter');
+  const list = document.getElementById('docsList');
+  const empty = document.getElementById('docsEmpty');
+
+  function normalize(s){ return (s||'').toLowerCase().trim(); }
+
+  function apply(){
+    const query = normalize(q && q.value);
+    const type = f ? f.value : 'all';
+    let visible = 0;
+
+    list.querySelectorAll('.docs-card').forEach(li=>{
+      const t = li.getAttribute('data-type') || '';
+      const title = normalize(li.getAttribute('data-title'));
+      const hitType = (type === 'all') || (t === type);
+      const hitQuery = !query || title.includes(query);
+      const show = hitType && hitQuery;
+      li.style.display = show ? '' : 'none';
+      if(show) visible++;
+    });
+
+    if(empty) empty.hidden = visible !== 0;
+  }
+
+  if(q) q.addEventListener('input', apply);
+  if(f) f.addEventListener('change', apply);
+  apply();
+})();
+</script>
+<style>
+ /* ========= THEME (rgb 0 0 40) ========= */
+    :root{
+      --bg: rgb(0 0 40);                  /* main background */
+      --surface: rgb(8 8 70);             /* cards/nav surface */
+      --surface-2: rgb(12 12 84);         /* alt surface */
+      --text: rgb(238 243 255);           /* main text */
+      --muted: rgb(170 182 205);          /* secondary text */
+      --brand: rgb(110 170 255);          /* accent 1 */
+      --brand-2: rgb(110 255 215);        /* accent 2 */
+      --border: rgb(22 30 80);            /* borders */
+      --ring: rgba(120,160,255,.5);       /* focus/hover ring */
+      --shadow: 0 12px 30px rgba(0,0,0,.35);
+      --radius: 16px;
+      --radius-lg: 22px;
+      --pad: 18px;
+      --max: 1160px;
+    }
+
+    *{box-sizing:border-box}
+    html,body{margin:0;background:var(--bg);color:var(--text);
+      font:16px/1.6 system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif}
+    img{max-width:100%;display:block}
+    a{color:var(--brand);text-decoration:none}
+    .container{width:min(100% - 32px, var(--max));margin-inline:auto}
+
+    /* ========= HEADER ========= */
+    header{
+      position:sticky;top:0;z-index:50;
+      background:linear-gradient(180deg, rgba(0,0,40,.96), rgba(0,0,40,.6));
+      border-bottom:1px solid var(--border);
+      backdrop-filter:saturate(1.4) blur(8px);
+    }
+    .nav{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:10px 0}
+    .brand{display:flex;align-items:center;gap:10px;font-weight:700}
+    .brand img{width:34px;height:34px;border-radius:10px}
+    .menu{display:flex;gap:18px;align-items:center}
+    .menu a{color:var(--text);opacity:.9}
+    .menu a:hover{opacity:1}
+    .cta{
+      padding:9px 14px;border-radius:999px;border:1px solid var(--ring);
+      background:linear-gradient(135deg, rgba(110,170,255,.18), rgba(110,255,215,.14));
+    }
+    .hamburger{display:none;background:none;border:0;color:var(--text);font-size:24px}
+
+    /* ========= HERO ========= */
+    .hero{
+      padding:64px 0 40px;border-bottom:1px solid var(--border);
+      background:
+        radial-gradient(900px 320px at 10% -10%, rgba(110,170,255,.18), transparent 70%),
+        radial-gradient(700px 280px at 90% 0%, rgba(110,255,215,.16), transparent 70%);
+    }
+    .hero-wrap{display:grid;grid-template-columns:1.15fr .85fr;gap:28px;align-items:center}
+    .eyebrow{display:inline-block;padding:6px 10px;border:1px solid var(--ring);border-radius:999px;font-size:12px;opacity:.95}
+    h1{font-size:clamp(28px, 5vw, 46px);line-height:1.12;margin:14px 0}
+    .lead{color:var(--muted);max-width:62ch}
+    .hero-actions{margin-top:18px;display:flex;gap:12px;flex-wrap:wrap}
+    .btn{
+      padding:12px 16px;border-radius:12px;border:1px solid var(--ring);background:var(--surface);
+      color:var(--text);box-shadow:var(--shadow)
+    }
+    .btn-primary{
+      background:linear-gradient(135deg, var(--brand) 0%, var(--brand-2) 100%);
+      color:rgb(0 0 40);border:0;font-weight:800
+    }
+    .card-hero{
+      background:linear-gradient(180deg, rgba(8,8,70,.9), rgba(12,12,84,.9));
+      border:1px solid var(--border);border-radius:var(--radius-lg);padding:20px
+    }
+
+    /* ========= PROJECTS ========= */
+    .section{padding:56px 0;border-top:1px solid var(--border)}
+    .section-title{text-align:center;font-size:clamp(26px,4vw,36px);margin:0 0 8px}
+    .section-subtitle{text-align:center;color:var(--muted);margin:0 0 34px}
+
+    .projects-grid{
+      display:grid;gap:20px;
+      grid-template-columns:repeat(3,1fr)
+    }
+    .project-card{
+      background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);
+      overflow:hidden;box-shadow:var(--shadow);transition:transform .25s ease, border-color .25s ease
+    }
+    .project-card:hover{transform:translateY(-6px);border-color:var(--ring)}
+    .project-card img{width:100%;height:200px;object-fit:cover}
+    .card-content{padding:18px}
+    .card-content h3{margin:0 0 8px;font-size:19px}
+    .card-content p{margin:0 0 14px;color:var(--muted)}
+    .buttons{display:flex;gap:10px;flex-wrap:wrap}
+    .btn-secondary{background:transparent;border:1px solid var(--ring)}
+    .btn-secondary:hover{background:var(--surface-2)}
+
+    /* ========= DOCUMENTATION ========= */
+    .docs-wrap{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+    .doc-card{
+      background:linear-gradient(180deg, rgba(8,8,70,.95), rgba(12,12,84,.95));
+      border:1px solid var(--border);border-radius:14px;padding:20px;box-shadow:var(--shadow)
+    }
+    .doc-card h3{margin:0 0 10px}
+    .doc-card ol{margin:0;padding-left:22px;color:var(--muted)}
+    .doc-card li{margin:6px 0}
+
+    /* ========= FOOTER ========= */
+    footer{padding:26px 0;border-top:1px solid var(--border);color:var(--muted);font-size:14px}
+
+    /* ========= RESPONSIVE ========= */
+    @media (max-width: 980px){
+      .hero-wrap{grid-template-columns:1fr}
+      .projects-grid{grid-template-columns:1fr 1fr}
+      .docs-wrap{grid-template-columns:1fr 1fr}
+    }
+    @media (max-width: 640px){
+      .menu{display:none}
+      .menu.open{display:flex;flex-direction:column;align-items:flex-start;background:var(--surface);padding:12px;border:1px solid var(--border);border-radius:12px}
+      .hamburger{display:block}
+      .projects-grid{grid-template-columns:1fr}
+      .docs-wrap{grid-template-columns:1fr}
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ===== HEADER ===== -->
+  <header>
+    <div class="container nav">
+      <div class="brand">
+        <img src="assets/logo.png" alt="Logo">
+        <span>MyBrand</span>
+      </div>
+      <nav id="menu" class="menu">
+        <a href="#projects">Projects</a>
+        <a href="#documentation">Docs</a>
+        <a class="cta" href="#contact">Contact</a>
+      </nav>
+      <button class="hamburger" aria-label="Open menu" onclick="document.getElementById('menu').classList.toggle('open')">☰</button>
+    </div>
+  </header>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero">
+    <div class="container hero-wrap">
+      <div>
+        <span class="eyebrow">Dark Theme • rgb(0 0 40)</span>
+        <h1>Projects & Documentation — Clean, Beautiful, Fast.</h1>
+        <p class="lead">Sequence me: Hero → Projects → Docs. Fully responsive, subtle glow, and a cohesive dark palette based on <code>rgb(0 0 40)</code>.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#projects">View Projects</a>
+          <a class="btn" href="#documentation">Read Docs</a>
+        </div>
+      </div>
+      <div class="card-hero">
+        <h3 style="margin:0 0 8px;">What you get</h3>
+        <ul style="margin:0 0 8px 18px;color:var(--muted)">
+          <li>Sticky header + mobile menu</li>
+          <li>Modern project cards with hover</li>
+          <li>Neat documentation cards</li>
+        </ul>
+        <a class="btn" href="#projects">Start below ↓</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PROJECTS ===== -->
+  <section id="projects" class="section">
+    <div class="container">
+      <h2 class="section-title">🚀 Our Projects</h2>
+      <p class="section-subtitle">Featured work with live demos and docs.</p>
+
+      <div class="projects-grid">
+        <!-- Project 1 -->
+        <div class="project-card">
+          <img src="m.jpeg" alt="Portfolio Website">
+          <div class="card-content">
+            <h3>Portfolio Website</h3>
+            <p>A modern personal portfolio website showcasing skills and work.</p>
+            <div class="buttons">
+              <a href="#" class="btn btn-primary">Live Demo</a>
+              <a href="#doc1" class="btn btn-secondary">Docs</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="project-card">
+          <img src="i.jpeg" alt="E-commerce UI">
+          <div class="card-content">
+            <h3>E-commerce UI</h3>
+            <p>Responsive shopping UI template with product cards & checkout.</p>
+            <div class="buttons">
+              <a href="#" class="btn btn-primary">Live Demo</a>
+              <a href="#doc2" class="btn btn-secondary">Docs</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 3 -->
+        <div class="project-card">
+          <img src="u.jpeg" alt="Blog Platform">
+          <div class="card-content">
+            <h3>Blog Platform</h3>
+            <p>A clean blog layout with categories, posts, and search.</p>
+            <div class="buttons">
+              <a href="#" class="btn btn-primary">Live Demo</a>
+              <a href="#doc3" class="btn btn-secondary">Docs</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== DOCUMENTATION ===== -->
+  <section id="documentation" class="section" style="background:linear-gradient(180deg, rgba(0,0,40,1) 0%, rgba(8,8,70,1) 100%);">
+    <div class="container">
+      <h2 class="section-title">📖 Documentation</h2>
+      <p class="section-subtitle">Step-by-step setup for each project.</p>
+
+      <div class="docs-wrap">
+        <div class="doc-card" id="doc1">
+          <h3>Portfolio Website</h3>
+          <ol>
+            <li>Download the source code.</li>
+            <li>Edit <code>index.html</code> (name, bio, links).</li>
+            <li>Deploy on Vercel (Drag & Drop).</li>
+          </ol>
+        </div>
+
+        <div class="doc-card" id="doc2">
+          <h3>E-commerce UI</h3>
+          <ol>
+            <li>Add product images in <code>/assets/products</code>.</li>
+            <li>Edit cards in <code>shop.html</code>.</li>
+            <li>Connect backend if needed (Node/PHP).</li>
+          </ol>
+        </div>
+
+        <div class="doc-card" id="doc3">
+          <h3>Blog Platform</h3>
+          <ol>
+            <li>Update <code>posts.json</code> with posts.</li>
+            <li>Each post: title, date, image, content.</li>
+            <li>Deploy with GitHub Pages or Vercel.</li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer id="contact">
+    <div class="container" style="display:flex;gap:14px;justify-content:space-between;flex-wrap:wrap;align-items:center">
+      <p>© <span id="y"></span> MyBrand — All rights reserved.</p>
+      <div style="display:flex;gap:12px">
+        <a href="#">Privacy</a>
+        <a href="#">Terms</a>
+        <a href="mailto:you@example.com">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // current year
+    document.getElementById('y').textContent = new Date().getFullYear();
+  </script>
+  
+<style>
+   /* ========= THEME (rgb 0 0 40) ========= */
+    :root{
+      --bg: rgb(0 0 40);                  /* main background */
+      --surface: rgb(8 8 70);             /* cards/nav surface */
+      --surface-2: rgb(12 12 84);         /* alt surface */
+      --text: rgb(238 243 255);           /* main text */
+      --muted: rgb(170 182 205);          /* secondary text */
+      --brand: rgb(110 170 255);          /* accent 1 */
+      --brand-2: rgb(110 255 215);        /* accent 2 */
+      --border: rgb(22 30 80);            /* borders */
+      --ring: rgba(120,160,255,.5);       /* focus/hover ring */
+      --shadow: 0 12px 30px rgba(0,0,0,.35);
+      --radius: 16px;
+      --radius-lg: 22px;
+      --pad: 18px;
+      --max: 1160px;
+    }
+
+    *{box-sizing:border-box}
+    html,body{margin:0;background:var(--bg);color:var(--text);
+      font:16px/1.6 system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif}
+    img{max-width:100%;display:block}
+    a{color:var(--brand);text-decoration:none}
+    .container{width:min(100% - 32px, var(--max));margin-inline:auto}
+
+    /* ========= HEADER ========= */
+    header{
+      position:sticky;top:0;z-index:50;
+      background:linear-gradient(180deg, rgba(0,0,40,.96), rgba(0,0,40,.6));
+      border-bottom:1px solid var(--border);
+      backdrop-filter:saturate(1.4) blur(8px);
+    }
+    .nav{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:10px 0}
+    .brand{display:flex;align-items:center;gap:10px;font-weight:700}
+    .brand img{width:34px;height:34px;border-radius:10px}
+    .menu{display:flex;gap:18px;align-items:center}
+    .menu a{color:var(--text);opacity:.9}
+    .menu a:hover{opacity:1}
+    .cta{
+      padding:9px 14px;border-radius:999px;border:1px solid var(--ring);
+      background:linear-gradient(135deg, rgba(110,170,255,.18), rgba(110,255,215,.14));
+    }
+    .hamburger{display:none;background:none;border:0;color:var(--text);font-size:24px}
+
+    /* ========= HERO ========= */
+    .hero{
+      padding:64px 0 40px;border-bottom:1px solid var(--border);
+      background:
+        radial-gradient(900px 320px at 10% -10%, rgba(110,170,255,.18), transparent 70%),
+        radial-gradient(700px 280px at 90% 0%, rgba(110,255,215,.16), transparent 70%);
+    }
+    .hero-wrap{display:grid;grid-template-columns:1.15fr .85fr;gap:28px;align-items:center}
+    .eyebrow{display:inline-block;padding:6px 10px;border:1px solid var(--ring);border-radius:999px;font-size:12px;opacity:.95}
+    h1{font-size:clamp(28px, 5vw, 46px);line-height:1.12;margin:14px 0}
+    .lead{color:var(--muted);max-width:62ch}
+    .hero-actions{margin-top:18px;display:flex;gap:12px;flex-wrap:wrap}
+    .btn{
+      padding:12px 16px;border-radius:12px;border:1px solid var(--ring);background:var(--surface);
+      color:var(--text);box-shadow:var(--shadow)
+    }
+    .btn-primary{
+      background:linear-gradient(135deg, var(--brand) 0%, var(--brand-2) 100%);
+      color:rgb(0 0 40);border:0;font-weight:800
+    }
+    .card-hero{
+      background:linear-gradient(180deg, rgba(8,8,70,.9), rgba(12,12,84,.9));
+      border:1px solid var(--border);border-radius:var(--radius-lg);padding:20px
+    }
+
+    /* ========= PROJECTS ========= */
+    .section{padding:56px 0;border-top:1px solid var(--border)}
+    .section-title{text-align:center;font-size:clamp(26px,4vw,36px);margin:0 0 8px}
+    .section-subtitle{text-align:center;color:var(--muted);margin:0 0 34px}
+
+    .projects-grid{
+      display:grid;gap:20px;
+      grid-template-columns:repeat(3,1fr)
+    }
+    .project-card{
+      background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);
+      overflow:hidden;box-shadow:var(--shadow);transition:transform .25s ease, border-color .25s ease
+    }
+    .project-card:hover{transform:translateY(-6px);border-color:var(--ring)}
+    .project-card img{width:100%;height:200px;object-fit:cover}
+    .card-content{padding:18px}
+    .card-content h3{margin:0 0 8px;font-size:19px}
+    .card-content p{margin:0 0 14px;color:var(--muted)}
+    .buttons{display:flex;gap:10px;flex-wrap:wrap}
+    .btn-secondary{background:transparent;border:1px solid var(--ring)}
+    .btn-secondary:hover{background:var(--surface-2)}
+
+    /* ========= DOCUMENTATION ========= */
+    .docs-wrap{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+    .doc-card{
+      background:linear-gradient(180deg, rgba(8,8,70,.95), rgba(12,12,84,.95));
+      border:1px solid var(--border);border-radius:14px;padding:20px;box-shadow:var(--shadow)
+    }
+    .doc-card h3{margin:0 0 10px}
+    .doc-card ol{margin:0;padding-left:22px;color:var(--muted)}
+    .doc-card li{margin:6px 0}
+
+    /* ========= FOOTER ========= */
+    footer{padding:26px 0;border-top:1px solid var(--border);color:var(--muted);font-size:14px}
+
+    /* ========= RESPONSIVE ========= */
+    @media (max-width: 980px){
+      .hero-wrap{grid-template-columns:1fr}
+      .projects-grid{grid-template-columns:1fr 1fr}
+      .docs-wrap{grid-template-columns:1fr 1fr}
+    }
+    @media (max-width: 640px){
+      .menu{display:none}
+      .menu.open{display:flex;flex-direction:column;align-items:flex-start;background:var(--surface);padding:12px;border:1px solid var(--border);border-radius:12px}
+      .hamburger{display:block}
+      .projects-grid{grid-template-columns:1fr}
+      .docs-wrap{grid-template-columns:1fr}
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ===== HEADER ===== -->
+  <header>
+    <div class="container nav">
+      <div class="brand">
+        <img src="assets/logo.png" alt="Logo">
+        <span>MyBrand</span>
+      </div>
+      <nav id="menu" class="menu">
+        <a href="#projects">Projects</a>
+        <a href="#documentation">Docs</a>
+        <a class="cta" href="#contact">Contact</a>
+      </nav>
+      <button class="hamburger" aria-label="Open menu" onclick="document.getElementById('menu').classList.toggle('open')">☰</button>
+    </div>
+  </header>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero">
+    <div class="container hero-wrap">
+      <div>
+        <span class="eyebrow">Dark Theme • rgb(0 0 40)</span>
+        <h1>Projects & Documentation — Clean, Beautiful, Fast.</h1>
+        <p class="lead">Sequence me: Hero → Projects → Docs. Fully responsive, subtle glow, and a cohesive dark palette based on <code>rgb(0 0 40)</code>.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#projects">View Projects</a>
+          <a class="btn" href="#documentation">Read Docs</a>
+        </div>
+      </div>
+      <div class="card-hero">
+        <h3 style="margin:0 0 8px;">What you get</h3>
+        <ul style="margin:0 0 8px 18px;color:var(--muted)">
+          <li>Sticky header + mobile menu</li>
+          <li>Modern project cards with hover</li>
+          <li>Neat documentation cards</li>
+        </ul>
+        <a class="btn" href="#projects">Start below ↓</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PROJECTS ===== -->
+  <section id="projects" class="section">
+    <div class="container">
+      <h2 class="section-title">🚀 Our Projects</h2>
+      <p class="section-subtitle">Featured work with live demos and docs.</p>
+
+      <div class="projects-grid">
+        <!-- Project 1 -->
+        <div class="project-card">
+          <img src="i.jpeg" alt="Portfolio Website">
+          <div class="card-content">
+            <h3>Portfolio Website</h3>
+            <p>A modern personal portfolio website showcasing skills and work.</p>
+            <div class="buttons">
+              <a href="#" class="btn btn-primary">Live Demo</a>
+              <a href="#doc1" class="btn btn-secondary">Docs</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="project-card">
+          <img src="m.jpeg" alt="E-commerce UI">
+          <div class="card-content">
+            <h3>E-commerce UI</h3>
+            <p>Responsive shopping UI template with product cards & checkout.</p>
+            <div class="buttons">
+              <a href="#" class="btn btn-primary">Live Demo</a>
+              <a href="#doc2" class="btn btn-secondary">Docs</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 3 -->
+        <div class="project-card">
+          <img src="p.jpeg" alt="Blog Platform">
+          <div class="card-content">
+            <h3>Blog Platform</h3>
+            <p>A clean blog layout with categories, posts, and search.</p>
+            <div class="buttons">
+              <a href="#" class="btn btn-primary">Live Demo</a>
+              <a href="#doc3" class="btn btn-secondary">Docs</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== DOCUMENTATION ===== -->
+  <section id="documentation" class="section" style="background:linear-gradient(180deg, rgba(0,0,40,1) 0%, rgba(8,8,70,1) 100%);">
+    <div class="container">
+      <h2 class="section-title">📖 Documentation</h2>
+      <p class="section-subtitle">Step-by-step setup for each project.</p>
+
+      <div class="docs-wrap">
+        <div class="doc-card" id="doc1">
+          <h3>Portfolio Website</h3>
+          <ol>
+            <li>Download the source code.</li>
+            <li>Edit <code>index.html</code> (name, bio, links).</li>
+            <li>Deploy on Vercel (Drag & Drop).</li>
+          </ol>
+        </div>
+
+        <div class="doc-card" id="doc2">
+          <h3>E-commerce UI</h3>
+          <ol>
+            <li>Add product images in <code>/assets/products</code>.</li>
+            <li>Edit cards in <code>shop.html</code>.</li>
+            <li>Connect backend if needed (Node/PHP).</li>
+          </ol>
+        </div>
+
+        <div class="doc-card" id="doc3">
+          <h3>Blog Platform</h3>
+          <ol>
+            <li>Update <code>posts.json</code> with posts.</li>
+            <li>Each post: title, date, image, content.</li>
+            <li>Deploy with GitHub Pages or Vercel.</li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer id="contact">
+    <div class="container" style="display:flex;gap:14px;justify-content:space-between;flex-wrap:wrap;align-items:center">
+      <p>© <span id="y"></span> MyBrand — All rights reserved.</p>
+      <div style="display:flex;gap:12px">
+        <a href="#">Privacy</a>
+        <a href="#">Terms</a>
+        <a href="mailto:you@example.com">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // current year
+    document.getElementById('y').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

@@ -1,0 +1,399 @@
+	<!DOCTYPE html>
+		<html>
+		<head>
+			<meta charset="utf-8">
+			<meta name="viewport" content="width=device-width, initial-scale=1">
+			<title>Saim Portfolio</title>
+			 <style>
+	body{
+		background-color: rgb(0, 0, 33);
+	} 	
+  ul a:hover {
+    color: rgb(0, 0, 400 );
+    font-size: 1.5rem;
+  }
+
+  header {
+    background-color: rgb(18, 18, 62);
+    font-family: Segoe UI, sans-serif;
+    font-size: 18px;
+
+  }
+
+  header a {
+    text-decoration: none;
+    color: whitesmoke;
+  }
+
+  h3:hover {
+    color:yellow ;
+  }
+
+  li {
+    list-style: none;
+    margin: 20px;
+  }
+
+  .logo {
+  	margin: 10px;
+    color: whitesmoke;
+    font-size: 40px;
+    animation: fadeIn 1s ease-in 2s;
+    font-family: Segoe UI, sans-serif;
+  }
+  .logo:hover {
+    color: rgb(0, 0, 500);
+    font-size: 3rem;
+  }
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: space-between;
+    animation: slideintop 3s ease;
+   }
+  @keyframes slideintop {
+    from {
+      opacity: 1;
+      transform: translateY(-50px);
+    }
+
+    to {
+      opacity: 1;
+      transform: translateY(0px);
+    }
+  }
+
+  @keyframes slideindown {
+    from {
+      opacity: 1;
+      transform: translateX(50px);
+    }
+
+    to {
+      opacity: 1;
+      transform: translateY(10px);
+    }
+  }
+    .right ul{
+    display: flex;
+    justify-content: space-between;
+    color: whitesmokes;
+  }
+ #element{
+  margin: 500px;
+  color: whitesmoke;
+  font-size: 40px;
+ }
+	/* About Section */
+.about-section {
+  padding: 50px 20px;
+  background: rgb(0, 0, 15);
+  text-align: center;
+}
+
+.about-section h2 {
+  font-size: 2rem;
+  margin-bottom: 30px;
+  color: rgb(0, 0, 59);
+}
+
+.about-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.about-card {
+  background: #fff;
+  padding: 20px;
+  border-radius: 16px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease;
+  margin: 15px;
+}
+
+.about-card:hover {
+  transform: translateY(-6px);
+}
+
+.about-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 15px;
+}
+
+.about-card h3 {
+  font-size: 1.3rem;
+  color: #111827;
+  margin-bottom: 10px;
+}
+
+.about-card p {
+  font-size: 0.95rem;
+  color: #374151;
+  line-height: 1.6;
+}
+
+/* Documentation Section */
+.doc-section {
+  background: rgb(0, 0, 37);
+  padding: 60px 20px;
+}
+
+.doc-container {
+  max-width: 800px;
+  margin: 0 auto;
+  background: #f3f4f6;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+  text-align: center;
+}
+
+.doc-container h2 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  color: rgb(0, 0,300 );
+}
+
+.doc-container p {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: #374151;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .about-container {
+    grid-template-columns: 1fr;
+  }
+}
+/* ==== About Us Section ==== */
+.about {
+  padding: 70px 0;
+  background: rgb(0, 0, 67);
+}
+
+.about-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  align-items: center;
+  gap: 40px;
+  max-width: 1100px;
+  margin: auto;
+  padding: 0 20px;
+}
+
+.about-title {
+  text-align: center;
+  font-size: 34px;
+  color: #fff;
+  margin-bottom: 14px;
+}
+
+.about-subtitle {
+  text-align: center;
+  color: #aaa;
+  margin-bottom: 50px;
+}
+
+.about-img img {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.6);
+  transition: transform 0.3s ease;
+}
+
+.about-img img:hover {
+  transform: scale(1.05);
+}
+
+.about-text {
+  color: #ddd;
+}
+
+.about-text h3 {
+  font-size: 24px;
+  margin-bottom: 12px;
+  color: #4facfe;
+}
+
+.about-text p {
+  font-size: 16px;
+  margin-bottom: 20px;
+  line-height: 1.7;
+}
+
+.about-btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background: #4facfe;
+  color: #fff;
+  font-weight: 600;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.about-btn:hover {
+  background: #1d7be8;
+}
+	</style>
+	</head>
+	<body>
+		<header>
+    <nav>
+      <div class="logo">Saim's Portfolio</div>
+      <div class="right">
+          <ul>
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="About us.html">ABOUT US</a></li>
+            <li><a href="Projects.html">PROJECTS</a></li>
+            <li><a href="New arrivals.html">NEW ARRIVALS</a></li>
+            <li><a href="contact.html">CONTACT ME</a></li>
+          </ul>
+      </div>
+    </nav>
+  </header>
+  <span id="element"></span>
+  <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+
+  <section class="about-section">
+  <h2>About My Work</h2>
+  <div class="about-container">
+    
+    <!-- First Image -->
+    <div class="about-card">
+      <img src="i.jpeg" alt="Meri Photo I">
+      <h3>Mera Kaam - I</h3>
+      <p>
+        Ye meri pehli project / image ka sample hai. Isme maine apna 
+        kaam showcase kiya hai.
+      </p>
+    </div>
+
+    <!-- Second Image -->
+    <div class="about-card">
+      <img src="w.jpeg" alt="Meri Photo W">
+      <h3>Mera Kaam - W</h3>
+      <p>
+        Ye doosra sample hai jo meri skills aur creativity ko dikhata hai.
+      </p>
+    </div>
+
+    <!-- Third Image -->
+    <div class="about-card">
+      <img src="p.jpeg" alt="Meri Photo P">
+      <h3>Mera Kaam - P</h3>
+      <p>
+        Ye teesra project / sample meri mehnat aur dedication ka result hai.
+      </p>
+    </div>
+
+  </div>
+</section>
+
+<!-- Documentation / About Me Section -->
+<section class="doc-section">
+  <div class="doc-container">
+    <h2>Mere Bare Mein</h2>
+    <p>
+      Mera naam <b>[saim farooq]</b> hai aur main ek web developer / student hoon. 
+      Mujhe coding, designing aur naye naye projects par kaam karna pasand hai.  
+      <br><br>
+      Ye website maine apni practice aur learning ke liye banayi hai jahan 
+      aap mere kaam ke samples dekh sakte ho. 
+      <br><br>
+      Aage chal kar main aur bhi naye projects aur skills add karunga jisse 
+      meri portfolio website aur strong banegi.  
+      <br><br>
+      <b>Shukriya!</b> 🙌
+    </p>
+  </div>
+</section>
+
+<section class="about">
+  <h2 class="about-title">About Us</h2>
+  <p class="about-subtitle">Who we are & what we do</p>
+  
+  <div class="about-container">
+    <div class="about-img">
+      <img src="team.jpg" alt="Our Team">
+    </div>
+    <div class="about-text">
+      <h3>We build amazing websites</h3>
+      <p>
+        Our team is passionate about creating modern, responsive and user-friendly websites. 
+        We believe in creativity, innovation and excellence to deliver projects that people love.
+      </p>
+      <a href="#contact" class="about-btn">Contact Us</a>
+    </div>
+  </div>
+
+  <!-- Bottom Section -->
+  <div class="about-bottom">
+    <div class="about-card">
+      <h3>🎯 Our Mission</h3>
+      <p>To design and develop powerful, user-friendly digital solutions that help businesses grow.</p>
+    </div>
+    <div class="about-card">
+      <h3>💡 Our Vision</h3>
+      <p>To become a leading web development company known for creativity, innovation, and quality.</p>
+    </div>
+    <div class="about-card">
+      <h3>🤝 Our Values</h3>
+      <p>We believe in teamwork, honesty, and building long-term partnerships with our clients.</p>
+    </div>
+  </div>
+</section>
+<style>
+🎨 CSS (Bottom Cards Styling)
+css
+Copy
+Edit
+/* Bottom section under About Us */
+.about-bottom {
+  margin-top: 60px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 25px;
+  padding: 0 20px;
+  max-width: 1100px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.about-card {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 14px;
+  padding: 25px;
+  text-align: center;
+  color: #eee;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.6);
+  transition: transform 0.3s, background 0.3s;
+}
+
+.about-card:hover {
+  transform: translateY(-8px);
+  background: rgba(79, 172, 254, 0.1);
+}
+
+.about-card h3 {
+  color: #4facfe;
+  font-size: 20px;
+  margin-bottom: 12px;
+}
+
+.about-card p {
+  font-size: 15px;
+  line-height: 1.6;
+  color: #ccc;
+}
+</style>
+	</body>
+  </html>
