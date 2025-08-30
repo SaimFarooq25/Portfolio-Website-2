@@ -769,9 +769,124 @@ img, video {
     // year
     document.getElementById('y').textContent = new Date().getFullYear();
   </script>
+  <!-- Netlify Forms contact (paste in your page) -->
+<form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" class="contact-form">
+  <!-- required for Netlify to detect the form -->
+  <input type="hidden" name="form-name" value="contact">
+
+  <!-- honeypot field (anti-spam) -->
+  <div style="display:none">
+    <label>Don’t fill this if you are human: <input name="bot-field"></label>
+  </div>
+
+  <label>
+    Name (required)
+    <input type="text" name="name" required />
+  </label>
+
+  <label>
+    Email (required)
+    <input type="email" name="email" required />
+  </label>
+
+  <label>
+    Phone / WhatsApp
+    <input type="tel" name="phone" />
+  </label>
+
+  <label>
+    Service / Order (e.g. "Website dev", "Logo design")
+    <input type="text" name="service" />
+  </label>
+
+  <label>
+    Message / Details
+    <textarea name="message" rows="5" required></textarea>
+  </label>
+
+  <button type="submit">Send Message</button>
+
+  <div class="form-status" aria-live="polite" style="margin-top:.5rem"></div>
+</form>
+
+<!-- optional: show a simple success message without leaving page -->
+<script>
+  // intercept submit to show a friendly message (Netlify will still receive)
+  document.addEventListener('submit', function (e) {
+    const form = e.target;
+    if (!form.matches('.contact-form')) return;
+    // Let default submit proceed (Netlify will handle), but show "sending" text.
+    const status = form.querySelector('.form-status');
+    status.textContent = 'Sending…';
+    // After a short delay (give Netlify time) show success — user still gets redirect to success if set.
+    setTimeout(() => { status.textContent = 'Message sent! Thank you — we will contact you soon.'; }, 1200);
+  });
+</script>
+  <!-- Formspree contact (replace endpoint) -->
+<form id="fsp-form" method="POST" action="https://formspree.io/f/YOUR_FORMSPREE_ENDPOINT" class="contact-form">
+  <label>
+    Name (required)
+    <input type="text" name="name" required />
+  </label>
+
+  <label>
+    Email (required)
+    <input type="email" name="email" required />
+  </label>
+
+  <label>
+    Phone / WhatsApp
+    <input type="tel" name="phone" />
+  </label>
+
+  <label>
+    Service / Order
+    <input type="text" name="service" />
+  </label>
+
+  <label>
+    Message / Details
+    <textarea name="message" rows="5" required></textarea>
+  </label>
+
+  <button type="submit">Send</button>
+
+  <div id="fsp-status" style="margin-top:.5rem"></div>
+</form>
+
+<script>
+  // optional JS to submit via fetch (no page reload) — requires your endpoint
+  (function(){
+    const f = document.getElementById('fsp-form');
+    const status = document.getElementById('fsp-status');
+    f.addEventListener('submit', function (e) {
+      e.preventDefault();
+      status.textContent = 'Sending…';
+      const data = new FormData(f);
+      fetch(f.action, {
+        method: 'POST',
+        body: data,
+        headers: { 'Accept': 'application/json' }
+      }).then(response => {
+        if (response.ok) {
+          status.textContent = 'Message sent! Check your email — we will contact you soon.';
+          f.reset();
+        } else {
+          response.json().then(data => {
+            if (data && data.errors) status.textContent = data.errors.map(err => err.message).join(', ');
+            else status.textContent = 'Oops, server error. Try again later.';
+          })
+        }
+      }).catch(err => {
+        status.textContent = 'Network error. Try again later.';
+      });
+    });
+  })();
+</script>
 </body>
 
 </html>
+
 
 
 
