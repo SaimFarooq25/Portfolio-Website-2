@@ -3,12 +3,44 @@
 
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css?v=2">
   <title>Saim portfolio website</title>
 </head>
 <style>
+  /* Images ko container ke andar fit karein */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Containers ko flexible banayein */
+body, html {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* Agar koi main container hai */
+.container {
+  width: 100%;
+  max-width: 1200px;  /* maximum width laptop/desktop ke liye */
+  margin: 0 auto;     /* center align desktop pe */
+  padding: 0 15px;    /* side padding choti screens ke liye */
+  box-sizing: border-box;
+}
+
+/* Text aur elements ko flexible rakhein */
+* {
+  box-sizing: border-box;
+}
+
+/* Optional: small devices ke liye font size adjust */
+@media (max-width: 600px) {
+  body {
+    font-size: 16px;
+  }
+}
   /* ===== Contact Form Styling ===== */
 .contact-form {
   max-width: 500px;
@@ -1033,6 +1065,7 @@ img, video {
 </body>
 
 </html>
+
 
 
 
