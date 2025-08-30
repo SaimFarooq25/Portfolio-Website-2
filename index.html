@@ -4,10 +4,32 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<meta name="google-site-verification" content="dZIoi0M1_OA3fnmgS9bKR39EEfuGyWFLxh8TVYStLQE" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Saim portfolio website</title>
 </head>
 <style>
+  /* Images, videos hamesha fit ho jayein */
+img, video {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Text container width control */
+.container {
+  width: min(1100px, 100% - 2rem);
+  margin: auto;
+}
+
+/* Mobile ke liye adjustments */
+@media (max-width: 768px) {
+  body {
+    font-size: 16px;  /* thoda readable */
+  }
+  .flex, .row {
+    flex-direction: column;
+  }
+}
   * {
     margin: 3px 0px;
     padding: 3px;
@@ -750,5 +772,6 @@
 </body>
 
 </html>
+
 
 
