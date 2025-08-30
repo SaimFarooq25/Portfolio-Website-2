@@ -3,11 +3,32 @@
 
 <head>
   <meta charset="UTF-8" />
- <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css?v=2">
   <title>Saim portfolio website</title>
 </head>
 <style>
+  /* Body aur main containers ko flexible banayein */
+body, html {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Agar aapka main container hai */
+.container {
+  width: 100%;
+  max-width: 1200px;  /* Desktop pe max width */
+  margin: 0 auto;     /* Desktop pe center align */
+  padding: 0 15px;    /* Mobile ke liye side padding */
+}
+
+/* Images ko container ke andar fit karein */
+img {
+  max-width: 100%;
+  height: auto;
+}
   /* Images ko container ke andar fit karein */
 img {
   max-width: 100%;
@@ -1065,6 +1086,7 @@ img, video {
 </body>
 
 </html>
+
 
 
 
