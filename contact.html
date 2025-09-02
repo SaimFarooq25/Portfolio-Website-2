@@ -253,6 +253,46 @@ body {
     height: auto;
   }
 }
+html, body {
+  overflow-x: hidden;   /* side scroll hatao */
+  margin: 0;
+  padding: 0;
+  height: 100%;         /* poora screen ke barabar */
+}
+
+/* Desktop */
+body {
+  transform-origin: top left;
+  height: auto;
+}
+
+/* Tablet */
+@media (max-width: 1024px) {
+  body {
+    transform: scale(0.60);
+    width: 166%;
+    height: auto;       /* sirf content ke barabar height */
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  body {
+    transform: scale(0.40);
+    width: 250%;
+    height: auto;
+  }
+}
+
+/* Small mobile */
+@media (max-width: 480px) {
+  body {
+    transform: scale(0.30);
+    width: 333%;
+    height: auto;
+  }
+}
+			 
 
   </style>
 </head>
